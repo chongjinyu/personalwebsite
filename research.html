@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Jinyu Chong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<nav id="main-nav"> <!-- Navigation bar =============================-->
+		<div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+	<a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+        <!-- <a href="photos.html">Photos</a> -->
+    </nav>
+
+    <header>
+        <h1><font color="#175B91">Research</font></h1>
+    </header>
+	<div id="popup-container" class="popup-container">
+		<div id="popup-content" class="popup-content">
+			<img id="popup-image" class="popup-image" alt="Full Resolution Image">
+		</div>
+	</div>
+    <section>
+
+        <!-- Placeholder content for Optical Correlators Section -->
+        <div id="Correlators" class="research-section">
+            <h2>Nanophotonic Design in Organic Photovoltaics Devices</h2>
+			<div align="justify">
+				<div class="about-container">
+				
+					<div class="about-text">
+						<p align="justify">
+							<strong>External Radiative Efficiency Simulation for Organic Photovoltaics &nbsp&nbsp</strong> The primary research topic focuses on accurately quantifying the non-radiation losses, particularly by evaluating the external radiative efficiency (ERE) of photovoltaic devices based on Planck’s Law and Schockley-Queisser limit. Through theorical modeling and simulations, this work investigates the origins of efficiency losses and examines the relationship between solar cell performance and calculated ERE value.<br>
+						</p>
+						<br>
+						
+					</div>
+		
+					<div class="image-research" onclick="openPopup('Images/ERE.jpg')">
+						<img src="Images/ERE.jpg" alt = "JC">
+						<p class="caption">ERE Simulation Scheme</p>
+					</div>
+				</div>			
+		
+
+        <!-- Placeholder content for Spatio-temporal Holographic Correlator Section -->
+        <div id="STHC" class="research-section">
+            <h2>Nanophotonic Design</h2>
+            <div align="justify">
+				<div class="about-container">
+				
+					<div class="about-text">
+						<p align="justify">
+							<strong>Nanophotonic Design Enhancing ERE &nbsp&nbsp</strong> Photonic design in photovoltaics, which involves introducing specific nanopatterns, enables efficient light-trapping and light-coupling in semiconductor mediums of organic photovoltaics, controls radiative recombination of excitons, thereby enhancing solar cell efficiency. This approach could help push solar cells closer to their theoretical efficiency limit. Beyond photovoltaics, photonic design plays a pivotal role in the semiconductor industry, with applications extending to silicon 
+photonics integrated circuit which enables high-capacity optical communications.  <br>
+						</p>
+						<br>
+						
+					</div>
+		
+					<div class="image-research" onclick="openPopup('Images/Nanophoton.jpg')">
+						<img src="Images/Nanophoton.jpg" alt = "JC">
+						<p class="caption">Three original ERE enhancement methods</p>
+					</div>
+				</div>
+
+				
+						
+        <!-- Placeholder content for Holograms Section -->
+        <div id="Holograms" class="research-section">
+            <h2>Optical Research</h2>
+            <div align="justify">
+		<div class="about-container">
+		
+			<div class="about-text">
+				<p align="justify">
+					<strong>Optical Characterization &nbsp&nbsp</strong>  Steady-state optical properties were investigated using photoluminescence (PL) spectroscopy and PL quantum yield (PLQY) measurements to evaluate the macroscale radiative efficiency enhancement. Time-resolved measurements were performed using two complementary techniques: ultrafast spectroscopy (PicoQuant system) for lifetime measurements and femtosecond-resolved PL spectroscopy (collaboration with Prof. Piotrowiak's group at Rutgers-Newark) to analyze exciton dynamics at the picosecond timescale, particularly focusing on triplet state transfer processes. <br>
+				</p>
+				<br>
+				
+			</div>
+
+			<div class="image-research" onclick="openPopup('Images/PL_ultrafast.jpg')">
+				<img src="Images/PL_ultrafast.jpg" alt = "JC">
+				<p class="caption">Ultrafast optical Study</p>
+			</div>
+		</div>
+	
+		
+	<!-- Placeholder content for PIC Section -->
+        <div id="PIC" class="research-section">
+            <h2>Device Fabrication</h2>
+            <div align="justify">
+
+		<div class="about-container">
+			<div class="about-text">
+				<p align="justify">
+					<strong>Ring Resonator &nbsp&nbsp </strong>  Devices were fabricated using physical vapor deposition (PVD) and sputtering techniques. Both conventional and inverted device architectures were successfully fabricated, described in Preliminary data part below. Solar cell performance was characterized using a solar simulator (Rutgers Cleanroom facility) under standard AM 1.5G illumination conditions. Future work will incorporate photonic design elements into the device architecture, with plans to measure external quantum efficiency (EQE) of device through potential external collaborations.  <br>
+				</p>
+				<br>
+				
+			</div>
+
+			<div class="image-research" onclick="openPopup('Images/device.jpg')">
+				<img src="Images/device.jpg" alt = "JC">
+				<p class="caption">Device Structure & Characterization</p>
+			</div>
+		</div>
+	</div>
+			<!-- <div class="button-container">
+				<button class="publications-button" onclick="window.location.href='photos.html#PIC'">
+						Pictures and Figures
+				</button>
+			</div> -->
+        </div>
+    </section>
+
+    <footer>© JC 2025</footer>
+
+    <script>
+        function openProject(url) {
+            window.location.href = url;
+        }
+    </script>
+<script>
+    function openPopup(imageSrc) {
+        var popupContainer = document.getElementById('popup-container');
+        var popupImage = document.getElementById('popup-image');
+
+        popupImage.src = imageSrc;
+        popupContainer.style.display = 'flex';
+
+        // Close the popup when clicking outside the image
+        popupContainer.onclick = function() {
+            popupContainer.style.display = 'none';
+            popupContainer.onclick = null;
+        };
+    }
+</script>
+<script>
+	function toggleMenu() {
+		var nav = document.getElementById('main-nav');
+		nav.classList.toggle('show');
+	}
+</script>
+
+</body>
+</html>
